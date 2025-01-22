@@ -4,6 +4,6 @@ import { UserModule } from './user/user.module';
 import { BookmarkModule } from './bookmark/bookmark.module';
 
 @Module({
-  imports: [AuthModule, UserModule, BookmarkModule]
+  imports: [AuthModule, UserModule, BookmarkModule],
 })
 export class AppModule {}
