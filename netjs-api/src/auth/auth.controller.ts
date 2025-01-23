@@ -16,7 +16,7 @@ export class AuthController {
 
     // POST: /auth/signin
     @Post('signin')
-    signIn(){
-        return this.authService.login()
+    signIn(@Body() dto: AuthDTO){
+        return this.authService.login(dto)
     }
 }
