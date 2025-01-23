@@ -17,7 +17,7 @@
 
 - [Password Hasing With Argon](./Reference/8.%20Password%20Hashing%20with%20Argon.md)
 
-- [DB Schema Changes](./Reference/9.%20DB%20schema%20changes.md)
+- [DB Schema Changes, Exception Handling](./Reference/9.%20DB%20schema%20changes.md)
 
 - [Configuration and ENV vars loading](./Reference/10.%20Configuration%20and%20EnvVars.md)
 
