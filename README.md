@@ -9,6 +9,7 @@
 - [Providers](./Reference/4.%20Provder.md)
 
 - [Setting Up DB with Prisma](./Reference/5.%20Setting%20Up%20Db.md)
+    - [Accessing Prisma Module From Other Modules, Provider Module Injection](./Reference/5.%20Setting%20Up%20Db.md#8-accessing-prisma-service-from-other-modules)
 
 - [DTO : Data Transfer Object](./Reference/6.%20Data%20Transfer%20Object%20DTO.md)
 
