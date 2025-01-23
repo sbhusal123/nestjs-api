@@ -7,10 +7,8 @@ import * as argon from 'argon2'
 
 @Injectable({})
 export class AuthService {
-    constructor(private prisma: PrismaService){
+    constructor(private prisma: PrismaService){}
 
-    }
-    
     async login(dto: AuthDTO){
         // find user by email
         const user = await this.prisma.user.findUnique({
