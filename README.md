@@ -13,7 +13,7 @@
 
 - [DTO : Data Transfer Object](./Reference/6.%20Data%20Transfer%20Object%20DTO.md)
 
-- [DTO and Payload Validation](./Reference/6.%20Data%20Transfer%20Object%20DTO.md)
+- [DTO and Payload Validation](./Reference/7.%20DTO%20and%20validations.md)
 
 - [Password Hasing With Argon](./Reference/8.%20Password%20Hashing%20with%20Argon.md)
 
