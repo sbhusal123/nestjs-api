@@ -21,3 +21,7 @@
 
 - [Configuration and ENV vars loading](./Reference/10.%20Configuration%20and%20EnvVars.md)
 
+- [Passport JWT Authentication](./Reference/11.%20JWT%20passport%20authentication.md)
+
+- [Protecting Routes with Guards](./Reference/12.%20Logged%20In%20User,Me.md)
+    - Implementing ``user/me`` endpoint
