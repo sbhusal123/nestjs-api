@@ -22,6 +22,7 @@ export class JwtStrategy extends  PassportStrategy(Strategy, 'jwt') {
     }
 
     // since, token is signed with sub and email, it must have sub and email in it
+    // is automatically injected into request
     async validate(payload: {
         sub: number;
         email: string;
