@@ -20,12 +20,9 @@
     "test:e2e": "dotenv -e .env.test jest --config ./test/jest-e2e.json",
     "db:test:migrate": "dotenv -e .env.test -- npx prisma migrate deploy",
     "db:test:reset": "dotenv -e .env.test -- npx prisma migrate reset --force",
-
-
     "pretest:e2e-watch": "dotenv -e .env.test -- npm run db:test:migrate",
     "test:e2e-watch": "dotenv -e .env.test -- jest --watch --no-cache --config ./test/jest-e2e.json",
     "posttest:e2e-watch": "dotenv -e .env.test -- npm run db:test:reset",
-
     "prisma-studio": "prisma studio",
     "prisma-studio:test": "dotenv -e .env.test -- prisma studio"
   },
@@ -41,6 +38,7 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "dotenv-cli": "^8.0.0",
+    "pactum": "^3.7.6",
     "passport-jwt": "^4.0.1",
     "prisma": "^6.2.1",
     "reflect-metadata": "^0.2.2",
