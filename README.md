@@ -32,5 +32,23 @@
 
 ## Writing Test Cases
 
-[Pactum API Testing: Pactum Guides](https://pactumjs.github.io/guides/api-testing.html)
+**External References**
+
+- [Pactum API Testing: Pactum Guides](https://pactumjs.github.io/guides/api-testing.html)
+
+- [Jest Getting Started](https://jestjs.io/docs/getting-started)
+
+**Contents:**
+
+- [1. Nest JS Testing Intro](./Reference/Testing/1.%20Intro.md)
+    - Test Boilerplate Setup
+
+- [2. Setting Up Test Application:](./Reference/Testing/2.%20Setting%20Up%20Test%20Application.md)
+    - Fixing Path Issue to resolve ``src``
+    - Setting Up Test Application with Test Module
+
+- [3. Setting Up Test Database](./Reference/Testing/3.%20Setup%20Test%20Database.md)
+    - Using ``dotenv-cli`` to setup environment for test
+    - Adjusting scripts to run test using ``.env.test``
+    - Database TearDown logic, PrismaService
 
