@@ -25,6 +25,12 @@
 
 - [Protecting Routes with Guards](./Reference/12.%20Logged%20In%20User,Me.md)
     - Implementing ``user/me`` endpoint
+    - Custom Guards and Usage
 
 - [Custom Decorator: Get Logged In User in COntroller](./Reference/13.%20Custom%20Param%20Decorator.md)
     - Modifying Response Status Codes
+
+## Writing Test Cases
+
+[Pactum API Testing: Pactum Guides](https://pactumjs.github.io/guides/api-testing.html)
+
