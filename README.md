@@ -43,7 +43,7 @@
 - [1. Nest JS Testing Intro](./Reference/Testing/1.%20Intro.md)
     - Test Boilerplate Setup
 
-- [2. Setting Up Test Application:](./Reference/Testing/2.%20Setting%20Up%20Test%20Application.md)
+- [2. Setting Up Test Application](./Reference/Testing/2.%20Setting%20Up%20Test%20Application.md)
     - Fixing Path Issue to resolve ``src``
     - Setting Up Test Application with Test Module
 
