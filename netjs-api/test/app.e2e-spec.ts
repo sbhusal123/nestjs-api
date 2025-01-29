@@ -197,11 +197,21 @@ describe('App e2e', () => {
 
   describe('Bookmarks', () => {
 
-    describe('Create Bookmark', () => {})
+    describe('Get Bookmarks', () => {
+      it('should return empty bookmarks', () => {
+        return pactum.spec().get('/bookmarks').withHeaders({
+          Authorization: "Bearer $S{userToken}"
+        }).expectBody([])
+      })
+    })
 
-    describe('Get Bookmarks', () => {})
+    describe('Get Bookmark By ID', () => {
+      
+    })
 
-    describe('Get Bookmark By ID', () => {})
+    describe('Create Bookmark', () => {
+
+    })
 
     describe('Edit Bookmark By ID', () => {})
 

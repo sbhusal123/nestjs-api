@@ -62,3 +62,8 @@
     - Pactum Stores: Access Token
     - Body Contains Assertions
 
+- [6. Implementing Bookmarks Endpoint](./Reference/Testing/6.%20Bookmarks%20Endpoints.md)
+    - Using Param Decorator and Pipe for GET, Update and Delete endpoint.
+    - Class validator for create and update DTO.
+    - Bookmark CRUD service for DB.
+
