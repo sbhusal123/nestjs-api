@@ -9,6 +9,7 @@ import {HttpStatus} from '@nestjs/common'
 
 import * as pactum from 'pactum'
 import { AuthDTO } from 'src/auth/dto';
+import { UpdateUserDTO } from 'src/user/dto';
 
 describe('App e2e', () => {
 
@@ -42,11 +43,12 @@ describe('App e2e', () => {
     pactum.request.setBaseUrl("http://localhost:3333")
   })
 
+  const dto: AuthDTO = {
+    email: "fake@gmail.com",
+    password: "adasdlkj"
+  }
+
   describe('Auth', () => {
-    const dto: AuthDTO = {
-      email: "fake@gmail.com",
-      password: "adasdlkj"
-    }
 
     describe('Signup', () => {
       it('should signup', () => {
@@ -145,7 +147,7 @@ describe('App e2e', () => {
         .expectStatus(HttpStatus.OK)
         .expectJsonSchema('access_token', {
           "type": "string"
-        })
+        }).stores('userToken', 'access_token')
       })
 
     })
@@ -153,9 +155,43 @@ describe('App e2e', () => {
 
   describe('User', () => {
 
-    describe('Get me', () => {})
+    describe('Get me', () => {
+      it('should get the current user', () => {
+        return pactum.spec().get('/users/me').withHeaders({
+          Authorization: "Bearer $S{userToken}"
+        }).expectStatus(HttpStatus.OK)
+        .expectBodyContains(dto.email)
+      })
+    })
 
-    describe('Edit User', () => {})    
+    describe('Edit User', () => {
+       const updateUser: UpdateUserDTO = {
+          firstName: "Ramesh",
+          lastName: "Shrestha",
+       }
+        it('should update the user', () => {
+          return pactum.spec().patch('/users')
+          .withHeaders({
+            Authorization: "Bearer $S{userToken}"
+          }).withBody({
+            ...updateUser
+          })
+          .expectStatus(HttpStatus.OK)
+          .expectBodyContains(updateUser.firstName)
+          .expectBodyContains(updateUser.lastName)
+          .expectBodyContains(dto.email)
+        })        
+      })
+
+      it('should throw error when invalid email', () => {
+          return pactum.spec().patch('/users')
+          .withHeaders({
+            Authorization: "Bearer $S{userToken}"
+          }).withBody({
+            email: "asdasd"
+          })
+          .expectStatus(HttpStatus.BAD_REQUEST)
+      })
     
   })
 

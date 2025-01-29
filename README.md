@@ -55,3 +55,10 @@
 - [4. Writing First Test: SignIn and SignUp](./Reference/Testing/4.%20Writing%20First%20Test.md)
     - Pactum Usage, Assertions
     - Test Blocks: ``describe`` and ``it``.
+
+- [5. Implementing User Service, Test Update, Get](./Reference/Testing/5.%20Test%20For%20Users.md)
+    - Get, Update User Controller and Service
+    - Testing With Pactum
+    - Pactum Stores: Access Token
+    - Body Contains Assertions
+
