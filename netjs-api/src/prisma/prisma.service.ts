@@ -14,4 +14,15 @@ export class PrismaService extends PrismaClient {
             }
         })
     }
+
+    // clean records from database
+    // transaction makes sure the 
+    // sql statement delete is exdcuted first for
+    // bookmarks and then uer, i.e. order is preserved
+    cleanDb(){
+        return this.$transaction([
+            this.bookmarks.deleteMany(),
+            this.user.deleteMany()
+        ])
+    }
 }

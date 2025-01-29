@@ -1,10 +1,12 @@
 import {Test} from '@nestjs/testing'
 import { AppModule } from '../src/app.module'
 import { INestApplication, ValidationPipe } from '@nestjs/common'
+import { PrismaService } from 'src/prisma/prisma.service';
 
 describe('App e2e', () => {
 
   let app: INestApplication;
+  let prisma: PrismaService;
 
   // before runing all test cases (at the begining)
   beforeAll(async () => {
@@ -21,6 +23,12 @@ describe('App e2e', () => {
         whitelist: true
       })
     )
+    await app.init()
+
+    prisma = app.get(PrismaService)
+
+    // clean database
+    await prisma.cleanDb()
   })
 
   // test block
