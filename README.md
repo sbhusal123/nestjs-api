@@ -52,3 +52,6 @@
     - Adjusting scripts to run test using ``.env.test``
     - Database TearDown logic, PrismaService
 
+- [4. Writing First Test: SignIn and SignUp]
+    - Pactum Usage, Assertions
+    - Test Blocks: ``describe`` and ``it``.
