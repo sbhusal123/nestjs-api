@@ -99,3 +99,4 @@
     - Using `ApiProperty` decorator, Reference
     - Enabling JWT Bearer Auth Scheme through Swagger
     - Using PartialType to create dto for patch.
+    - Types: PartialType, OmitType, IntersectionType, ...
