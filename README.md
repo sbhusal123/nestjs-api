@@ -91,3 +91,8 @@
     - Class validator for create and update DTO.
     - Bookmark CRUD service for DB.
 
+
+- [Swagger Docs Generation](./Reference/14.%20Swagger%20Docs.md)
+    - Swagger Setup with ``@nestjs/swagger``
+    - Updating DTO to generate schema for request
+    - Using `ApiProperty` decorator, Reference
