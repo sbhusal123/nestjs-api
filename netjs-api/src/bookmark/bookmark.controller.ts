@@ -3,10 +3,12 @@ import { JwtGuard } from 'src/auth/guard';
 import { GetUser } from 'src/auth/decorator';
 import { BookmarkService } from './bookmark.service';
 import { CreateBookmarkDTO, UpdateBookmarkDTO } from './dto';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
 
 @Controller('bookmarks')
 @UseGuards(JwtGuard)
+@ApiBearerAuth() // <--- Swagger Bearer Auth
 export class BookmarkController {
     constructor(private bookmarkService: BookmarkService){}
 

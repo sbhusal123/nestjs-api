@@ -1,19 +1,6 @@
-import { ApiProperty } from "@nestjs/swagger"
-import { IsOptional, IsString } from "class-validator"
+import { PartialType } from "@nestjs/swagger"
 
-export class UpdateBookmarkDTO {
-    @ApiProperty({required: false})
-    @IsOptional()
-    @IsString()
-    title?: string
+import { CreateBookmarkDTO } from "./create-bokomark.dto"
 
-    @ApiProperty({required: false})
-    @IsOptional()
-    @IsString()
-    description?: string
-
-    @ApiProperty({required: false})
-    @IsOptional()
-    @IsString()
-    link?: string
+export class UpdateBookmarkDTO extends PartialType(CreateBookmarkDTO) {
 }

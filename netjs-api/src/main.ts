@@ -14,11 +14,11 @@ async function bootstrap() {
     whitelist: true
   }));
 
-  const config = new DocumentBuilder()
+  const config = new DocumentBuilder().addBearerAuth()
     .setTitle('Bookmarks API')
     .setDescription('API Docs For Bookmarks API.')
     .setVersion('1.0')
-    .build();
+    .build()
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('swagger', app, documentFactory);
   

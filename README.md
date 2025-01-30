@@ -89,6 +89,7 @@
 - [6. Implementing Bookmarks Endpoint](./Reference/Testing/6.%20Bookmarks%20Endpoints.md)
     - Using Param Decorator and Pipe for GET, Update and Delete endpoint.
     - Class validator for create and update DTO.
+    - Using PartialType from ``@nestjs/swagger`` to create dto for patch.
     - Bookmark CRUD service for DB.
 
 
@@ -96,3 +97,5 @@
     - Swagger Setup with ``@nestjs/swagger``
     - Updating DTO to generate schema for request
     - Using `ApiProperty` decorator, Reference
+    - Enabling JWT Bearer Auth Scheme through Swagger
+    - Using PartialType to create dto for patch.
